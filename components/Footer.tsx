@@ -30,11 +30,11 @@ export function Footer() {
               Powered by: Muntaha CPA Professional Corporation Inc.
             </p>
             <a
-              href="tel:+16478791124"
+              href="tel:+12892082087"
               className="inline-flex items-center gap-3 text-white/70 hover:text-secondary transition-colors font-medium"
             >
               <Phone size={16} className="text-secondary shrink-0" />
-              (647) 879-1124
+              (289) 208-2087
             </a>
           </div>
 
@@ -74,11 +74,11 @@ export function Footer() {
               L7N 2G1
             </a>
             <a
-              href="tel:+16478791124"
+              href="tel:+12892082087"
               className="inline-flex items-center gap-2 text-white/70 hover:text-secondary transition-colors text-sm"
             >
               <Phone size={14} className="text-secondary shrink-0" />
-              (647) 879-1124
+              (289) 208-2087
             </a>
           </div>
 

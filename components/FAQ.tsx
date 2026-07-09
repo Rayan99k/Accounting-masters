@@ -96,8 +96,8 @@ export function FAQ() {
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 If something isn't covered here, call us at{" "}
-                <a href="tel:+16478791124" className="text-secondary font-semibold hover:underline">
-                  (647) 879-1124
+                <a href="tel:+12892082087" className="text-secondary font-semibold hover:underline">
+                  (289) 208-2087
                 </a>{" "}
                 or use the contact form below — we're happy to answer before you book.
               </p>

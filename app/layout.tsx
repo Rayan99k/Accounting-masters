@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Accounting Masters Group Inc.",
   },
   description:
-    "Accounting Masters Group Inc. — Burlington, ON accounting firm offering personal tax, corporate tax, bookkeeping, payroll, and financial advisory services. Powered by Muntaha CPA Professional Corporation Inc. Call (647) 879-1124.",
+    "Accounting Masters Group Inc. — Burlington, ON accounting firm offering personal tax, corporate tax, bookkeeping, payroll, and financial advisory services. Powered by Muntaha CPA Professional Corporation Inc. Call (289) 208-2087.",
   robots: { index: true, follow: true },
   openGraph: {
     title: "Accounting Masters Group Inc. | Burlington, ON CPA Firm",

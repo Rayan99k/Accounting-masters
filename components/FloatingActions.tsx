@@ -39,8 +39,8 @@ export function FloatingActions() {
       </AnimatePresence>
 
       <motion.a
-        href="tel:+16478791124"
-        aria-label="Call us at (647) 879-1124"
+        href="tel:+12892082087"
+        aria-label="Call us at (289) 208-2087"
         initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 0.5 }}
@@ -49,7 +49,7 @@ export function FloatingActions() {
         className="flex items-center gap-2.5 bg-secondary text-white font-bold px-5 py-3 rounded-full shadow-xl hover:bg-secondary/90 transition-colors text-sm"
       >
         <Phone size={16} className="shrink-0" />
-        <span className="hidden sm:inline">(647) 879-1124</span>
+        <span className="hidden sm:inline">(289) 208-2087</span>
         <span className="sm:hidden">Call Us</span>
       </motion.a>
     </div>

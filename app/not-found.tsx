@@ -19,7 +19,7 @@ export default function NotFound() {
           Back to Homepage
         </Link>
         <p className="mt-10 text-white/30 text-sm">
-          Accounting Masters Group Inc. · Burlington, ON · (647) 879-1124
+          Accounting Masters Group Inc. · Burlington, ON · (289) 208-2087
         </p>
       </div>
     </div>

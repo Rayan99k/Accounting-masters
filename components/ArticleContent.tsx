@@ -171,10 +171,10 @@ export default function ArticleContent({
                   We serve individuals and small businesses in Burlington and the surrounding area. Free initial consultation.
                 </p>
                 <a
-                  href="tel:+16478791124"
+                  href="tel:+12892082087"
                   className="flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-bold px-5 py-3 rounded-sm transition-colors text-sm mb-4 justify-center"
                 >
-                  <Phone size={15} /> (647) 879-1124
+                  <Phone size={15} /> (289) 208-2087
                 </a>
                 <Link
                   href="/"

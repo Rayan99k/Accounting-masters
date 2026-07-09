@@ -77,7 +77,7 @@ export const articles: Article[] = [
       {
         type: "note",
         label: "Burlington clients",
-        text: "If you haven't contributed to your RRSP in a while, you likely have significant unused room built up. We can pull your room from CRA My Account and help you decide whether a lump-sum contribution makes sense before the deadline. Call us at (647) 879-1124.",
+        text: "If you haven't contributed to your RRSP in a while, you likely have significant unused room built up. We can pull your room from CRA My Account and help you decide whether a lump-sum contribution makes sense before the deadline. Call us at (289) 208-2087.",
       },
     ],
   },
@@ -387,7 +387,7 @@ export const articles: Article[] = [
       {
         type: "note",
         label: "Next step",
-        text: "If you're considering incorporating, book a consultation with us before you file. The decision about timing can affect what you pay this year and how you structure your business going forward. Call (647) 879-1124.",
+        text: "If you're considering incorporating, book a consultation with us before you file. The decision about timing can affect what you pay this year and how you structure your business going forward. Call (289) 208-2087.",
       },
     ],
   },

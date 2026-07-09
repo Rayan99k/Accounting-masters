@@ -139,10 +139,10 @@ export function Contact() {
                   <div>
                     <h5 className="font-bold text-foreground text-sm uppercase tracking-wider mb-2">Phone</h5>
                     <a
-                      href="tel:+16478791124"
+                      href="tel:+12892082087"
                       className="text-muted-foreground hover:text-secondary transition-colors font-medium"
                     >
-                      (647) 879-1124
+                      (289) 208-2087
                     </a>
                   </div>
                 </div>

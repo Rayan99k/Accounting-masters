@@ -150,8 +150,8 @@ export default function Resources() {
             </h3>
             <p className="text-white/70">
               Call us at{" "}
-              <a href="tel:+16478791124" className="text-secondary font-semibold hover:underline">
-                (647) 879-1124
+              <a href="tel:+12892082087" className="text-secondary font-semibold hover:underline">
+                (289) 208-2087
               </a>{" "}
               or send a message — no obligation.
             </p>
