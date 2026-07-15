@@ -22,15 +22,21 @@ export function Navbar() {
 
   const scrollTo = (id: string) => {
     setMobileMenuOpen(false);
-    if (location === "/") {
+
+    const scrollToSection = () => {
       const element = document.getElementById(id);
-      if (element) element.scrollIntoView({ behavior: "smooth" });
+      if (!element) return;
+
+      const headerHeight = 96;
+      const top = element.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top, behavior: "smooth" });
+    };
+
+    if (location === "/") {
+      window.setTimeout(scrollToSection, 0);
     } else {
       router.push("/");
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) element.scrollIntoView({ behavior: "smooth" });
-      }, 120);
+      window.setTimeout(scrollToSection, 250);
     }
   };
 
