@@ -16,7 +16,7 @@ export default function Home() {
     name: "Accounting Masters Group Inc.",
     description:
       "Personal and corporate accounting services in Burlington, Ontario. Tax preparation, bookkeeping, payroll, and financial advisory. Powered by Muntaha CPA Professional Corporation Inc.",
-    url: "https://www.accountingmastersgroup.ca",
+    url: "https://www.accountingmasters.ca",
     telephone: "+1-289-208-2087",
     priceRange: "$$",
     address: {
