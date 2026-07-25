@@ -16,13 +16,20 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 
 function useSubmitContact() {
   return useMutation({
-    mutationFn: async ({ data }: { data: { name: string; email: string; message: string } }) => {
+    mutationFn: async ({ data }: { data: { name: string; email: string; service: string; message: string } }) => {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -36,9 +43,20 @@ function useSubmitContact() {
   });
 }
 
+const serviceOptions = [
+  "Personal Tax Returns",
+  "Corporate Tax",
+  "Bookkeeping & Financial Statements",
+  "Payroll",
+  "Incorporated Medical Professionals",
+  "Accounting & Financial Advisory",
+  "General Inquiry",
+];
+
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
+  service: z.string().min(1, { message: "Please select a service." }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
@@ -51,6 +69,7 @@ export function Contact() {
     defaultValues: {
       name: "",
       email: "",
+      service: "General Inquiry",
       message: "",
     },
   });
@@ -221,6 +240,31 @@ export function Contact() {
                       )}
                     />
                   </div>
+
+                  <FormField
+                    control={form.control}
+                    name="service"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-foreground font-semibold">Service</FormLabel>
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <FormControl>
+                            <SelectTrigger className="bg-background border-border focus-visible:ring-secondary rounded-sm h-12">
+                              <SelectValue placeholder="Select a service" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {serviceOptions.map((option) => (
+                              <SelectItem key={option} value={option}>
+                                {option}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
                   <FormField
                     control={form.control}

@@ -50,12 +50,12 @@ export function Footer() {
                 "Accounting & Financial Advisory",
               ].map((svc) => (
                 <li key={svc}>
-                  <button
-                    onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-                    className="hover:text-secondary transition-colors text-left"
+                  <Link
+                    href="/#services"
+                    className="hover:text-secondary transition-colors text-left block"
                   >
                     {svc}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

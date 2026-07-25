@@ -24,13 +24,15 @@ import { Resend } from "resend";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, message } = body ?? {};
+    const { name, email, service, message } = body ?? {};
 
     if (
       typeof name !== "string" ||
       typeof email !== "string" ||
+      typeof service !== "string" ||
       typeof message !== "string" ||
       name.trim().length < 2 ||
+      service.trim().length < 1 ||
       message.trim().length < 10 ||
       !email.includes("@")
     ) {
@@ -48,7 +50,7 @@ export async function POST(request: Request) {
       console.warn(
         "RESEND_API_KEY or CONTACT_TO_EMAIL is not set — logging submission instead of emailing it.",
       );
-      console.log("New contact form submission:", { name, email, message });
+      console.log("New contact form submission:", { name, email, service, message });
       return NextResponse.json({ success: true });
     }
 
@@ -58,8 +60,8 @@ export async function POST(request: Request) {
       from: `Accounting Masters Group Website <${fromEmail}>`,
       to: toEmail,
       replyTo: email,
-      subject: `New contact form message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      subject: `New contact form message from ${name} (${service})`,
+      text: `Name: ${name}\nEmail: ${email}\nService: ${service}\n\nMessage:\n${message}`,
     });
 
     if (error) {
