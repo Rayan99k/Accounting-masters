@@ -3,7 +3,7 @@ import { Providers } from "@/components/Providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.accountingmastersgroup.ca"),
+  metadataBase: new URL("https://www.accountingmasters.ca"),
   title: {
     default: "Accounting Masters Group Inc. | Burlington, ON CPA Firm",
     template: "%s | Accounting Masters Group Inc.",
@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description:
     "Accounting Masters Group Inc. — Burlington, ON accounting firm offering personal tax, corporate tax, bookkeeping, payroll, and financial advisory services. Powered by Muntaha CPA Professional Corporation Inc. Call (289) 208-2087.",
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Accounting Masters Group Inc. | Burlington, ON CPA Firm",
     description:

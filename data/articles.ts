@@ -5,7 +5,8 @@ export type ContentBlock =
   | { type: "list"; items: string[] }
   | { type: "numbered"; items: string[] }
   | { type: "highlight"; text: string }
-  | { type: "note"; label: string; text: string };
+  | { type: "note"; label: string; text: string }
+  | { type: "table"; headers: [string, string]; rows: [string, string][] };
 
 export interface Article {
   slug: string;
@@ -18,6 +19,322 @@ export interface Article {
 }
 
 export const articles: Article[] = [
+  {
+    slug: "how-to-choose-the-right-accountant-in-burlington",
+    title: "How to Choose the Right Accountant in Burlington and the Surrounding Area",
+    excerpt:
+      "The right accountant does more than file a return once a year. Here's what to look for — CPA credentials, industry experience, communication, fees and more — before you hire one in Burlington, Oakville, Mississauga, Milton or Hamilton.",
+    category: "Choosing an Accountant",
+    date: "July 24, 2026",
+    readingTime: "10 min read",
+    content: [
+      {
+        type: "paragraph",
+        text: "Choosing an accountant is an important decision for any business owner. The right accountant does more than prepare a tax return at the end of the year — they help you understand your financial position, meet your filing obligations, plan for upcoming expenses and make better-informed business decisions.",
+      },
+      {
+        type: "paragraph",
+        text: "For business owners in Burlington, Oakville, Mississauga, Milton, Hamilton and nearby communities, it's especially helpful to work with someone familiar with both Canadian tax requirements and the rules that apply to businesses operating in Ontario. Whether you're launching a new business, managing an established corporation, hiring your first employee or trying to improve your bookkeeping, this guide explains what to look for.",
+      },
+      { type: "heading", text: "What Should a Business Accountant Help You With?" },
+      {
+        type: "paragraph",
+        text: "The services you need depend on the size and structure of your business. A sole proprietor may need support with bookkeeping, HST and a personal tax return, while an incorporated business may require corporate tax filings, payroll, financial statements and year-round tax planning. A business accountant may be able to assist with:",
+      },
+      {
+        type: "list",
+        items: [
+          "Personal and corporate income tax returns",
+          "Bookkeeping and financial statements",
+          "GST/HST registration and returns",
+          "Payroll calculations and remittances",
+          "CRA correspondence",
+          "Business incorporation considerations",
+          "Tax instalments and filing deadlines",
+          "Cash-flow and financial reporting",
+          "Tax planning for owner-managed businesses",
+          "Accounting for incorporated professionals",
+        ],
+      },
+      {
+        type: "note",
+        label: "Before you hire",
+        text: "Make sure the accountant clearly explains which services are included, which cost extra, and who will actually be responsible for your file.",
+      },
+      { type: "heading", text: "1. Look for a CPA With Relevant Experience" },
+      {
+        type: "paragraph",
+        text: "In Ontario, CPA stands for Chartered Professional Accountant. The designation requires professional education, examinations, qualifying practical experience and ongoing professional development. CPA Ontario generally requires candidates to complete at least 30 months of qualifying practical experience, and members are subject to professional and ethical standards and continuing professional-development requirements.",
+      },
+      {
+        type: "paragraph",
+        text: "The designation is an important starting point, but it shouldn't be your only consideration. You should also ask about the accountant's experience with:",
+      },
+      {
+        type: "list",
+        items: [
+          "Businesses similar to yours",
+          "Your industry",
+          "Your legal structure",
+          "Your accounting software",
+          "The particular tax or compliance issue you need help with",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "A CPA who regularly works with owner-managed Ontario businesses may be a better fit than someone whose experience is concentrated in an unrelated area of accounting.",
+      },
+      { type: "heading", text: "2. Choose Someone Familiar With Ontario Businesses" },
+      {
+        type: "paragraph",
+        text: "Many Canadian tax obligations are administered federally by the CRA, while other taxes, credits and employer obligations are specific to Ontario. An accountant serving businesses in Burlington, Mississauga, Oakville or elsewhere in Southern Ontario should be comfortable working with matters such as:",
+      },
+      {
+        type: "list",
+        items: [
+          "Ontario corporate income tax",
+          "The federal small business deduction",
+          "GST/HST registration and reporting",
+          "Payroll source deductions",
+          "Ontario Employer Health Tax, where applicable",
+          "Capital-cost allowance for business assets",
+          "Tax instalments",
+          "CRA reviews and correspondence",
+          "Tax rules affecting owner-managed corporations",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Most businesses must consider GST/HST registration once their taxable revenues exceed the CRA's small-supplier threshold, generally $30,000 — though the timing and calculation can vary based on how quickly the threshold is exceeded and whether associated businesses are involved.",
+      },
+      {
+        type: "highlight",
+        text: "Ontario's rules can change. Effective July 1, 2026, Ontario's lower corporate income tax rate for qualifying small-business income was reduced from 3.2% to 2.2%. Eligibility depends on factors such as the corporation's active business income, taxable capital and association with other corporations — a good accountant should explain how this applies to your specific business.",
+      },
+      { type: "heading", text: "3. Find an Accountant Who Communicates Throughout the Year" },
+      {
+        type: "paragraph",
+        text: "Some businesses only contact their accountant when a tax deadline is approaching. While annual tax preparation may be enough for a straightforward situation, growing businesses often benefit from more regular communication, including:",
+      },
+      {
+        type: "list",
+        items: [
+          "Reviewing financial results during the year",
+          "Estimating upcoming tax obligations",
+          "Identifying missing or incorrectly recorded expenses",
+          "Preparing for major purchases",
+          "Reviewing payroll and HST accounts",
+          "Planning owner compensation",
+          "Discussing whether incorporation still makes sense",
+          "Catching bookkeeping problems before year-end",
+          "Preparing for financing or expansion",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Ask how often the accountant normally communicates with business clients, and confirm whether consultations are included in the ongoing service or billed separately. The goal isn't constant contact — it's having access to useful advice before a decision is made rather than after the financial year has already ended.",
+      },
+      { type: "heading", text: "4. Consider Their Experience With Your Industry" },
+      {
+        type: "paragraph",
+        text: "Different industries create different accounting and reporting challenges. An accountant doesn't necessarily need to specialize exclusively in your industry, but they should understand the transactions and compliance obligations your business regularly encounters.",
+      },
+      {
+        type: "table",
+        headers: ["Industry", "Common accounting considerations"],
+        rows: [
+          ["Construction and skilled trades", "Job costing, subcontractor payments, vehicle and equipment expenses, HST and T5018 reporting"],
+          ["Restaurants and hospitality", "Inventory, tips, payroll, seasonal staffing, equipment and renovation costs"],
+          ["Retail and e-commerce", "Inventory valuation, payment-platform reconciliation, online sales and cross-border transactions"],
+          ["Consulting and professional services", "Home-office expenses, incorporation, owner compensation and professional expenses"],
+          ["Medical and healthcare professionals", "Professional corporations, clinic expenses, equipment, dues and compensation planning"],
+          ["Real estate and rental properties", "Rental income, operating expenses, capital expenditures and capital-cost allowance"],
+          ["Technology and online businesses", "Software subscriptions, contractors, foreign-currency transactions and payment processors"],
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Construction is a useful example: businesses whose primary income comes from construction activities may be required to report certain payments made to Canadian subcontractors using T5018 slips. When interviewing an accountant, ask for examples of the issues they regularly handle for businesses similar to yours — they don't need to disclose confidential client information, but they should be able to explain their relevant experience.",
+      },
+      { type: "heading", text: "5. Ask About Their Bookkeeping and Technology Process" },
+      {
+        type: "paragraph",
+        text: "Modern accounting technology can make it easier to keep records organized and understand how a business is performing. Depending on the firm and service package, its process may include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Cloud-based accounting software",
+          "Digital receipt and document collection",
+          "Bank and credit-card feeds",
+          "Online invoicing",
+          "Payroll integrations",
+          "Secure client portals",
+          "Electronic signatures",
+          "Monthly or quarterly reports",
+          "Integration with payment systems such as Stripe or Square",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Technology alone doesn't make an accounting firm better — the important question is whether the firm uses its systems effectively and whether those systems make the process easier for you. Ask who will reconcile your accounts, how often the books will be updated and how you'll submit receipts and other documents.",
+      },
+      {
+        type: "note",
+        label: "Security matters",
+        text: "Sending unprotected financial documents through ordinary email may not be appropriate for every situation. A secure document-sharing process is preferable when tax records, identification documents or confidential business information are involved.",
+      },
+      { type: "heading", text: "6. Make Sure Fees and Responsibilities Are Clear" },
+      {
+        type: "paragraph",
+        text: "Accounting fees can be hourly, fixed, monthly or based on the complexity of the work — none of these approaches is automatically better than the others. Before engaging an accountant, ask for a written description of:",
+      },
+      {
+        type: "list",
+        items: [
+          "The services included",
+          "The expected fee or starting price",
+          "Additional charges that may apply",
+          "The documents you're responsible for providing",
+          "The expected completion timeline",
+          "The method and frequency of communication",
+          "Whether CRA correspondence is included",
+          "Whether tax-planning meetings are included",
+          "Whether bookkeeping corrections are billed separately",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The lowest quote isn't always the best value, but the highest price doesn't automatically guarantee the best service either. Compare the scope of work, professional experience, communication and level of support — not just the final number.",
+      },
+      { type: "heading", text: "7. Pay Attention to Responsiveness and Clarity" },
+      {
+        type: "paragraph",
+        text: "Accounting can become frustrating when questions go unanswered or explanations are difficult to understand. During your first conversation, consider whether the accountant:",
+      },
+      {
+        type: "list",
+        items: [
+          "Listens carefully to your situation",
+          "Answers questions directly",
+          "Explains technical issues clearly",
+          "Identifies information they still need",
+          "Avoids making unrealistic promises",
+          "Provides a clear next step",
+          "Sets reasonable expectations about timing",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "A trustworthy accountant should be willing to say when an answer depends on additional information — tax advice is rarely one-size-fits-all. You should leave the conversation with a better understanding of your situation, not simply a longer list of accounting terminology.",
+      },
+      { type: "heading", text: "Does Your Accountant Need to Be in the Same City?" },
+      {
+        type: "paragraph",
+        text: "Not necessarily. Many accounting services can now be provided through secure portals, cloud bookkeeping platforms, telephone calls and video meetings — a Burlington accounting firm can work with clients in Oakville, Mississauga, Milton, Hamilton and other communities without requiring frequent office visits.",
+      },
+      {
+        type: "paragraph",
+        text: "That said, location can still help. A locally based firm may be easier to reach for in-person appointments and may have greater familiarity with the small businesses operating throughout Halton Region and the western GTA. The more important questions are:",
+      },
+      {
+        type: "list",
+        items: [
+          "Does the firm serve clients in your area?",
+          "Can it support you remotely when needed?",
+          "Is the accountant familiar with Ontario requirements?",
+          "Can you meet in person when the situation calls for it?",
+          "Will your file receive appropriate attention?",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Accounting Masters Group Inc. is based in Burlington and welcomes individuals, small businesses, corporations and incorporated professionals from Burlington, Oakville, Mississauga, Milton, Hamilton and surrounding communities.",
+      },
+      { type: "heading", text: "Questions to Ask Before Hiring an Accountant" },
+      {
+        type: "numbered",
+        items: [
+          "Are you a designated CPA?",
+          "Will I deal directly with a CPA?",
+          "Do you regularly work with businesses in my industry?",
+          "What services are included in your fee?",
+          "Do you provide tax planning during the year?",
+          "How quickly do you normally respond to client questions?",
+          "Which bookkeeping and accounting platforms do you support?",
+          "How do clients securely send documents?",
+          "Can you assist with CRA correspondence?",
+          "How do you handle work outside the original scope?",
+          "What information will you need from me?",
+          "Do you work with clients outside Burlington?",
+          "How will you help me understand my financial statements?",
+          "What happens if my books need to be corrected before filing?",
+        ],
+      },
+      { type: "heading", text: "Common Mistakes to Avoid" },
+      { type: "subheading", text: "Choosing solely based on price" },
+      {
+        type: "paragraph",
+        text: "A low price may be suitable for a simple return, but businesses should compare the complete scope of service. A quote may not include bookkeeping corrections, tax planning, financial statements or CRA support.",
+      },
+      { type: "subheading", text: "Waiting until the filing deadline" },
+      {
+        type: "paragraph",
+        text: "Contacting an accountant shortly before a deadline can limit the time available to organize records, correct bookkeeping issues and discuss planning opportunities.",
+      },
+      { type: "subheading", text: "Assuming every accountant offers the same services" },
+      {
+        type: "paragraph",
+        text: "Some accountants focus on personal tax, while others work primarily with corporations, bookkeeping, assurance or advisory services. Confirm that the firm handles the work you need.",
+      },
+      { type: "subheading", text: "Failing to discuss communication" },
+      {
+        type: "paragraph",
+        text: "Ask who will respond to your questions and how long responses normally take. Confirm whether you'll deal directly with the accountant or primarily with administrative staff.",
+      },
+      { type: "subheading", text: "Expecting guaranteed tax savings" },
+      {
+        type: "paragraph",
+        text: "No accountant can responsibly guarantee a particular refund or tax saving before reviewing the facts. The objective should be accurate reporting, appropriate planning and compliance with applicable rules.",
+      },
+      { type: "subheading", text: "Treating bookkeeping and tax preparation as unrelated" },
+      {
+        type: "paragraph",
+        text: "Accurate tax filings begin with accurate records. Poor bookkeeping can result in missed expenses, inaccurate HST returns and unnecessary work at year-end.",
+      },
+      { type: "heading", text: "Choosing an Accountant for Long-Term Business Support" },
+      {
+        type: "paragraph",
+        text: "The best accounting relationship fits the actual needs of your business. A new sole proprietor may need help setting up bookkeeping and understanding HST. An established corporation may need regular financial reporting, payroll support and tax planning. An incorporated professional may need help coordinating corporate filings with personal compensation and long-term planning.",
+      },
+      {
+        type: "paragraph",
+        text: "As your business changes, your accounting needs may change too. Look for a firm that can explain what you need today while helping you prepare for the next stage of growth.",
+      },
+      { type: "heading", text: "Accounting Support in Burlington, Oakville, Mississauga and Nearby Communities" },
+      {
+        type: "paragraph",
+        text: "Accounting Masters Group Inc. provides accounting and tax services for individuals, small businesses, corporations and professional corporations. The firm is based in Burlington, Ontario, and is powered by Muntaha CPA Professional Corporation Inc. Clients deal directly with a designated CPA and receive clear explanations of their tax and accounting matters. Services include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Personal tax returns",
+          "Corporate tax returns and planning",
+          "Bookkeeping and financial statements",
+          "Payroll",
+          "Accounting for incorporated medical professionals",
+          "Accounting and financial advisory",
+          "Assistance with CRA correspondence",
+        ],
+      },
+      {
+        type: "note",
+        label: "Visit or call us",
+        text: "Accounting Masters Group Inc., powered by Muntaha CPA Professional Corporation Inc. — 4155 Fairview Street, Unit 21, Burlington, ON L7N 2G1. Phone (289) 208-2087. Office hours Monday to Friday, 10:00 a.m. to 3:00 p.m.; evenings and weekends available by appointment.",
+      },
+    ],
+  },
   {
     slug: "rrsp-2025-deadline-contribution-limits",
     title: "RRSP 2025: Deadline, Contribution Limits & Who Should Contribute",

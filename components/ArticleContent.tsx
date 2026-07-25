@@ -70,6 +70,28 @@ function Block({ block }: { block: ContentBlock }) {
         </div>
       );
 
+    case "table":
+      return (
+        <div className="my-6 overflow-x-auto rounded-sm border border-border">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="bg-primary/5">
+                <th className="text-left font-bold text-primary px-4 py-3 w-1/3">{block.headers[0]}</th>
+                <th className="text-left font-bold text-primary px-4 py-3">{block.headers[1]}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, i) => (
+                <tr key={i} className={i % 2 === 1 ? "bg-zinc-50" : undefined}>
+                  <td className="align-top px-4 py-3 font-semibold text-foreground border-t border-border">{row[0]}</td>
+                  <td className="align-top px-4 py-3 text-foreground leading-relaxed border-t border-border">{row[1]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+
     default:
       return null;
   }
@@ -81,6 +103,7 @@ const categoryColors: Record<string, string> = {
   "Tax Planning": "bg-purple-50 text-purple-700",
   "Small Business": "bg-green-50 text-green-700",
   "Corporate": "bg-slate-100 text-slate-700",
+  "Choosing an Accountant": "bg-teal-50 text-teal-700",
 };
 
 export default function ArticleContent({

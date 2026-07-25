@@ -15,6 +15,7 @@ const categoryColors: Record<string, string> = {
   "Tax Planning": "bg-purple-50 text-purple-700",
   "Small Business": "bg-green-50 text-green-700",
   "Corporate": "bg-slate-100 text-slate-700",
+  "Choosing an Accountant": "bg-teal-50 text-teal-700",
 };
 
 export default function Resources() {

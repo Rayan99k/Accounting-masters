@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Tax Tips & Resources",
   description:
     "Plain-language articles on personal and corporate tax in Canada from Accounting Masters Group Inc.",
+  alternates: {
+    canonical: "/resources",
+  },
 };
 
 export default function Page() {
