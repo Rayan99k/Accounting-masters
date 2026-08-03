@@ -10,43 +10,65 @@ import { Footer } from "@/components/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "AccountingService",
-    name: "Accounting Masters Group Inc.",
-    description:
-      "Personal and corporate accounting services in Burlington, Ontario. Tax preparation, bookkeeping, payroll, and financial advisory. Powered by Muntaha CPA Professional Corporation Inc.",
-    url: "https://www.accountingmasters.ca",
-    telephone: "+1-289-208-2087",
-    priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "4155 Fairview Street, Unit 21",
-      addressLocality: "Burlington",
-      addressRegion: "ON",
-      postalCode: "L7N 2G1",
-      addressCountry: "CA",
-    },
-    areaServed: [
-      "Burlington",
-      "Oakville",
-      "Mississauga",
-      "Milton",
-      "Hamilton",
-    ],
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Accounting Masters Group Inc.",
+      url: "https://www.accountingmasters.ca",
+      logo: "https://www.accountingmasters.ca/logo-icon.png",
+      telephone: "+1-289-208-2087",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "4155 Fairview Street, Unit 21",
+        addressLocality: "Burlington",
+        addressRegion: "ON",
+        postalCode: "L7N 2G1",
+        addressCountry: "CA",
+      },
+      sameAs: [
+        "https://www.facebook.com/AccountingMastersGroup",
+        "https://www.linkedin.com/company/accounting-masters-group-inc/",
       ],
-      opens: "10:00",
-      closes: "15:00",
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      name: "Accounting Masters Group Inc.",
+      description:
+        "Personal and corporate accounting services in Burlington, Ontario. Tax preparation, bookkeeping, payroll, and financial advisory. Powered by Muntaha CPA Professional Corporation Inc.",
+      url: "https://www.accountingmasters.ca",
+      telephone: "+1-289-208-2087",
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "4155 Fairview Street, Unit 21",
+        addressLocality: "Burlington",
+        addressRegion: "ON",
+        postalCode: "L7N 2G1",
+        addressCountry: "CA",
+      },
+      areaServed: [
+        "Burlington",
+        "Oakville",
+        "Mississauga",
+        "Milton",
+        "Hamilton",
+      ],
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+        ],
+        opens: "10:00",
+        closes: "15:00",
+      },
+    },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
