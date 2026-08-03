@@ -104,6 +104,7 @@ const categoryColors: Record<string, string> = {
   "Small Business": "bg-green-50 text-green-700",
   "Corporate": "bg-slate-100 text-slate-700",
   "Choosing an Accountant": "bg-teal-50 text-teal-700",
+  "CRA & Audits": "bg-rose-50 text-rose-700",
 };
 
 export default function ArticleContent({
