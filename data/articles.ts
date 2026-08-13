@@ -6,7 +6,8 @@ export type ContentBlock =
   | { type: "numbered"; items: string[] }
   | { type: "highlight"; text: string }
   | { type: "note"; label: string; text: string }
-  | { type: "table"; headers: [string, string]; rows: [string, string][] };
+  | { type: "table"; headers: [string, string]; rows: [string, string][] }
+  | { type: "links"; heading?: string; items: { label: string; url: string }[] };
 
 export interface Article {
   slug: string;
@@ -708,6 +709,16 @@ const articleSeed: Article[] = [
         label: "Visit or call us",
         text: "Accounting Masters Group Inc., powered by Muntaha CPA Professional Corporation Inc. — 4155 Fairview Street, Unit 21, Burlington, ON L7N 2G1. Phone (289) 208-2087. Office hours Monday to Friday, 10:00 a.m. to 3:00 p.m.; evenings and weekends available by appointment.",
       },
+      {
+        type: "links",
+        heading: "Helpful Official Resources",
+        items: [
+          { label: "CRA: GST/HST rules for small suppliers", url: "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/when-register-charge.html" },
+          { label: "Government of Ontario: Corporate income tax rates and the small business deduction", url: "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/provincial-territorial-corporation-tax/ontario-provincial-corporation-tax/ontario-small-business-deduction.html" },
+          { label: "CPA Ontario: Practical-experience requirements for the CPA designation", url: "https://www.cpaontario.ca/students/practical-experience" },
+          { label: "CRA: T5018 reporting for construction subcontractor payments", url: "https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t5018.html" },
+        ],
+      },
     ],
   },
   {
@@ -1027,6 +1038,177 @@ const articleSeed: Article[] = [
         type: "note",
         label: "Visit or call us",
         text: "Accounting Masters Group Inc., powered by Muntaha CPA Professional Corporation Inc. — 4155 Fairview Street, Unit 21, Burlington, ON L7N 2G1. Phone (289) 208-2087. Office hours Monday to Friday, 10:00 a.m. to 3:00 p.m.; evenings and weekends available by appointment. Have a copy of the full CRA letter available, including every page and attachment, when you contact the firm.",
+      },
+    ],
+  },
+  {
+    slug: "bookkeeper-vs-accountant-small-business",
+    title: "Bookkeeper vs. Accountant: Which Does Your Small Business Need?",
+    excerpt:
+      "Not sure whether you need a bookkeeper, an accountant, or both? Here's the difference between the two roles and what makes sense for your Ontario small business.",
+    category: "Small Business",
+    date: "August 10, 2026",
+    readingTime: "6 min read",
+    content: [
+      {
+        type: "paragraph",
+        text: "Running a small business means keeping track of sales, expenses, invoices, payroll and taxes. At some point, many business owners ask the same question: do I need a bookkeeper, an accountant, or both?",
+      },
+      {
+        type: "paragraph",
+        text: "The answer depends on the size and complexity of your business, but understanding the difference can help you decide where professional support would be most useful.",
+      },
+      { type: "heading", text: "What Does a Bookkeeper Do?" },
+      {
+        type: "paragraph",
+        text: "A bookkeeper is generally responsible for keeping your financial records accurate and up to date. Their work may include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Recording income and expenses",
+          "Reconciling bank and credit-card accounts",
+          "Managing invoices and payments",
+          "Organizing receipts and documents",
+          "Preparing basic financial reports",
+          "Maintaining bookkeeping records for HST and payroll",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "For a small business owner, good bookkeeping means having reliable numbers throughout the year rather than trying to reconstruct everything at tax time.",
+      },
+      { type: "heading", text: "What Does an Accountant Do?" },
+      {
+        type: "paragraph",
+        text: "An accountant typically works at a higher level of financial reporting, tax compliance and planning. Depending on the firm, services may include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Personal and corporate tax returns",
+          "Year-end financial statements",
+          "Tax planning",
+          "Corporate accounting",
+          "HST and payroll guidance",
+          "CRA correspondence",
+          "Financial analysis and advisory",
+          "Assistance with business decisions",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "An accountant can also review your books and identify issues that could affect your tax return or financial reporting.",
+      },
+      { type: "heading", text: "Do You Need Both?" },
+      {
+        type: "paragraph",
+        text: "For many growing businesses, yes. A bookkeeper can maintain your records throughout the year while an accountant handles tax filings, year-end work and planning. This can be especially useful when a business has:",
+      },
+      {
+        type: "list",
+        items: [
+          "Employees",
+          "Significant monthly expenses",
+          "HST obligations",
+          "Multiple revenue streams",
+          "A corporation",
+          "Contractors or subcontractors",
+          "More complicated financial transactions",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The two roles work together. Accurate bookkeeping gives the accountant better information to work with at year-end.",
+      },
+      { type: "heading", text: "When You May Only Need Bookkeeping" },
+      {
+        type: "paragraph",
+        text: "A very small business with straightforward transactions may mainly need bookkeeping support. For example, a new sole proprietor with a limited number of monthly transactions may benefit from keeping organized books and hiring an accountant for annual tax preparation. As the business grows, however, its accounting needs may change.",
+      },
+      { type: "heading", text: "Signs Your Business May Need an Accountant" },
+      {
+        type: "paragraph",
+        text: "Consider speaking with an accountant when:",
+      },
+      {
+        type: "list",
+        items: [
+          "You are incorporating or already operate a corporation",
+          "Your business income is growing",
+          "You are unsure how much tax to set aside",
+          "You are hiring employees",
+          "You have HST or payroll questions",
+          "You are buying equipment or other major assets",
+          "You receive correspondence from the CRA",
+          "You are considering paying yourself through salary or dividends",
+          "You want more than basic bookkeeping",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "An accountant can help you understand not just what happened financially, but what your numbers may mean for the decisions you make next.",
+      },
+      { type: "heading", text: "Why Good Bookkeeping Matters at Tax Time" },
+      {
+        type: "paragraph",
+        text: "Your accountant can only work with the information available. Incomplete or inaccurate bookkeeping can lead to:",
+      },
+      {
+        type: "list",
+        items: [
+          "Missing expenses",
+          "Incorrect HST reporting",
+          "More work at year-end",
+          "Delayed tax filings",
+          "Difficulty understanding cash flow",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Keeping your records organized throughout the year can make tax preparation faster and help your accountant identify potential issues earlier.",
+      },
+      { type: "heading", text: "Bookkeeper or Accountant: Which One Should You Hire?" },
+      {
+        type: "paragraph",
+        text: "There is no single answer for every business.",
+      },
+      {
+        type: "table",
+        headers: ["Your situation", "Support to consider"],
+        rows: [
+          ["New, simple sole proprietorship", "Bookkeeping + annual tax preparation"],
+          ["Growing small business", "Ongoing bookkeeping + accountant"],
+          ["Incorporated business", "Bookkeeping + corporate accountant"],
+          ["Business with employees", "Bookkeeping + payroll + accountant"],
+          ["CRA review or correspondence", "Accountant"],
+          ["Complex tax or financial planning", "Accountant"],
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The important question is not simply whether you need a bookkeeper or accountant. It is how much financial support your business needs right now.",
+      },
+      { type: "heading", text: "Accounting Support for Burlington and the Surrounding GTA" },
+      {
+        type: "paragraph",
+        text: "Accounting Masters Group Inc. provides bookkeeping, financial statements, payroll, personal tax, corporate tax and accounting advisory services. Based in Burlington, the firm works with clients throughout Burlington, Oakville, Mississauga, Milton, Hamilton, Halton Region and surrounding communities.",
+      },
+      {
+        type: "paragraph",
+        text: "Whether you need help keeping your books organized, preparing your corporate tax return or getting a better understanding of your business finances, choosing the right level of accounting support can save time and make managing your business easier.",
+      },
+      {
+        type: "note",
+        label: "Need help with your business accounting?",
+        text: "Accounting Masters Group Inc., powered by Muntaha CPA Professional Corporation Inc. — 4155 Fairview Street, Unit 21, Burlington, ON L7N 2G1. Phone (289) 208-2087. Office hours Monday to Friday, 10:00 a.m. to 3:00 p.m.; evenings and weekends available by appointment.",
+      },
+      {
+        type: "links",
+        heading: "Helpful Resource",
+        items: [
+          { label: "Canada Revenue Agency — Keeping Records", url: "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/keeping-records.html" },
+        ],
       },
     ],
   },

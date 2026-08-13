@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, Clock, Phone } from "lucide-react";
+import { ArrowLeft, Clock, Phone, ExternalLink } from "lucide-react";
 import { type Article, type ContentBlock } from "@/data/articles";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -89,6 +89,32 @@ function Block({ block }: { block: ContentBlock }) {
               ))}
             </tbody>
           </table>
+        </div>
+      );
+
+    case "links":
+      return (
+        <div className="my-6">
+          {block.heading && (
+            <h3 className="text-sm font-bold uppercase tracking-wider text-primary mb-3">
+              {block.heading}
+            </h3>
+          )}
+          <ul className="space-y-2">
+            {block.items.map((link, i) => (
+              <li key={i}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-secondary font-medium hover:underline underline-offset-2"
+                >
+                  {link.label}
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       );
 
