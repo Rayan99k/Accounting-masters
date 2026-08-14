@@ -108,8 +108,6 @@ export function Hero() {
         >
           <span>CPA Designated</span>
           <span className="w-1 h-1 rounded-full bg-secondary/50" />
-          <span>ACCA Certified</span>
-          <span className="w-1 h-1 rounded-full bg-secondary/50" />
           <span>Burlington, ON</span>
         </motion.div>
 

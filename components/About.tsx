@@ -24,11 +24,7 @@ export function About() {
               <div className="space-y-5 text-white/80 text-lg font-light leading-relaxed mb-10">
                 <p>
                   Accounting Masters Group Inc. is based in Burlington, Ontario,
-                  and is powered by Muntaha CPA Professional Corporation Inc. Our
-                  principal is a Chartered Professional Accountant (CPA, Canada)
-                  and holds the ACCA designation from the UK, with over nine years
-                  of experience working in public accounting on both sides of the
-                  Atlantic.
+                  and is powered by Muntaha CPA Professional Corporation Inc.
                 </p>
                 <p>
                   We work with a wide range of clients — from individuals filing
@@ -53,7 +49,7 @@ export function About() {
               <div className="grid grid-cols-2 gap-8 pt-10 border-t border-white/20">
                 {[
                   { label: "Years in Practice", val: "9+" },
-                  { label: "Professional Designations", val: "CPA · ACCA" },
+                  { label: "Professional Designations", val: "CPA" },
                   { label: "Clients Served", val: "500+" },
                   { label: "Location", val: "Burlington, ON" },
                 ].map((stat, idx) => (

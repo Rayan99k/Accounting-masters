@@ -51,7 +51,7 @@ export function WhyChooseUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <div className="text-secondary text-3xl font-serif font-bold mb-2">CPA · ACCA</div>
+              <div className="text-secondary text-3xl font-serif font-bold mb-2">CPA</div>
               <div className="text-white/80 text-sm leading-snug">Designated professionals serving Burlington and the surrounding area</div>
             </motion.div>
           </motion.div>
